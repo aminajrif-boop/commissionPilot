@@ -78,6 +78,9 @@ const AppContent: React.FC = () => {
       {/* Global Modals & Overlays */}
       <ProductDetailModal />
       <AffiliateRedirectModal />
+      <ErrorBoundary fallbackTitle="Error en el Panel de Gestión CMS" onReset={() => setIsAdminOpen(false)}>
+        <AdminModal />
+      </ErrorBoundary>
       <CookieBanner />
       <NewsletterPopup />
 

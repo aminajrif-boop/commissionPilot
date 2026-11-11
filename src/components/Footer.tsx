@@ -1,6 +1,6 @@
 import React from 'react';
 import { useApp } from '../context/AppContext';
-import { Compass, ShieldCheck, Cookie, ArrowUpRight, Scale } from 'lucide-react';
+import { Compass, ShieldCheck, Cookie, ArrowUpRight, Scale, Lock } from 'lucide-react';
 import { CATEGORIES_LIST } from '../data/initialProducts';
 
 export const Footer: React.FC = () => {
@@ -190,6 +190,15 @@ export const Footer: React.FC = () => {
                   <span>{language === 'es' ? 'Configurar Cookies' : 'Cookie Settings'}</span>
                 </button>
               </li>
+              <li className="pt-2 border-t border-slate-800/80">
+                <button 
+                  onClick={() => setIsAdminOpen(true)}
+                  className="inline-flex items-center gap-1.5 text-slate-400 hover:text-purple-300 font-medium transition-colors cursor-pointer"
+                >
+                  <Lock className="w-3.5 h-3.5 text-purple-400" />
+                  <span>{language === 'es' ? 'Panel de Gestión (Admin)' : 'Admin Portal'}</span>
+                </button>
+              </li>
             </ul>
           </div>
 
@@ -211,6 +220,15 @@ export const Footer: React.FC = () => {
             </a>
             <span>·</span>
             <span>{language === 'es' ? 'Afiliación Ética y Verificada' : 'Ethical Affiliate Discovery'}</span>
+            <span>·</span>
+            <button 
+              onClick={() => setIsAdminOpen(true)}
+              className="inline-flex items-center gap-1 text-slate-500 hover:text-purple-300 transition-colors cursor-pointer"
+              title="Acceso al Panel de Administración"
+            >
+              <Lock className="w-3 h-3 text-purple-400" />
+              <span>Admin</span>
+            </button>
           </div>
         </div>
 
