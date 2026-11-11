@@ -85,8 +85,8 @@ export const Footer: React.FC = () => {
 
             <p className="text-slate-400 text-xs leading-relaxed max-w-sm">
               {language === 'es'
-                ? 'Plataforma digital independiente de descubrimiento, comparación y ofertas verificadas en herramientas digitales, software y servicios online.'
-                : 'Independent digital platform for discovering, comparing, and accessing verified deals on software, digital tools, and online services.'}
+                ? 'Portal independiente de análisis y recomendaciones de gadgets innovadores, tecnología para viajes, hogar y ofertas exclusivas verificadas.'
+                : 'Independent discovery and review portal for innovative gadgets, travel tech, home essentials, and verified exclusive deals.'}
             </p>
 
             <div className="text-[11px] text-slate-400 pt-1">

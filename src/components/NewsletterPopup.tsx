@@ -10,7 +10,8 @@ export const NewsletterPopup: React.FC = () => {
     addSubscriber, 
     openLegalDoc, 
     isNewsletterOpen, 
-    setIsNewsletterOpen 
+    setIsNewsletterOpen,
+    cookiePreferences 
   } = useApp();
 
   const [email, setEmail] = useState('');
@@ -19,14 +20,18 @@ export const NewsletterPopup: React.FC = () => {
   const [success, setSuccess] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
 
-  // Automatically trigger directly when entering the web page
+  // Automatically trigger directly when entering the web page, after cookie popup is addressed
   useEffect(() => {
+    if (!cookiePreferences.hasConsented) {
+      return;
+    }
+
     const timer = setTimeout(() => {
       setIsNewsletterOpen(true);
-    }, 350);
+    }, 1000);
 
     return () => clearTimeout(timer);
-  }, [setIsNewsletterOpen]);
+  }, [cookiePreferences.hasConsented, setIsNewsletterOpen]);
 
   const handleClose = () => {
     setIsNewsletterOpen(false);

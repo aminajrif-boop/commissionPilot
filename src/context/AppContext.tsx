@@ -88,7 +88,7 @@ const LOCAL_PRODUCTS_KEY = 'commissionpilot_products_v7';
 const LOCAL_REVIEWS_KEY = 'commissionpilot_reviews_v3';
 const LOCAL_CLICKS_KEY = 'commissionpilot_clicks_v2';
 const LOCAL_AFFILIATE_CONFIG_KEY = 'commissionpilot_affiliate_config_v2';
-const LOCAL_COOKIES_KEY = 'commissionpilot_cookies_consent_v1';
+const LOCAL_COOKIES_KEY = 'commissionpilot_cookies_consent_v4';
 const LOCAL_BREVO_CONFIG_KEY = 'commissionpilot_brevo_config_v1';
 const LOCAL_SUBSCRIBERS_KEY = 'commissionpilot_subscribers_v1';
 

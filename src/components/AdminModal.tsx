@@ -156,36 +156,18 @@ export const AdminModal: React.FC<{ isPageMode?: boolean }> = ({ isPageMode = fa
   const [reviewForm, setReviewForm] = useState<ReviewArticle>(defaultReviewForm);
   const [tagsForm, setTagsForm] = useState(affiliateConfig);
 
-  // Handle Login (Accepts pilot2026, currentPassword, or master override)
+  // Handle Login
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
     const clean = passwordInput.trim();
-    if (
-      clean === currentPassword || 
-      clean === DEFAULT_ADMIN_PASSWORD || 
-      clean.toLowerCase() === 'pilot2026' ||
-      clean === 'admin'
-    ) {
+    if (clean === currentPassword || clean === DEFAULT_ADMIN_PASSWORD) {
       setIsAuthenticated(true);
       sessionStorage.setItem('commissionpilot_auth', 'true');
       setAuthError('');
       setPasswordInput('');
     } else {
-      setAuthError(language === 'es' ? 'Contraseña incorrecta. Utiliza la clave por defecto: pilot2026' : 'Incorrect password. Default master password is: pilot2026');
+      setAuthError(language === 'es' ? 'Contraseña de administración incorrecta.' : 'Incorrect administration password.');
     }
-  };
-
-  const handleFillDefaultPassword = () => {
-    setPasswordInput(DEFAULT_ADMIN_PASSWORD);
-    setAuthError('');
-  };
-
-  const handleResetPasswordToDefault = () => {
-    localStorage.removeItem(ADMIN_PASSWORD_KEY);
-    setCurrentPassword(DEFAULT_ADMIN_PASSWORD);
-    setPasswordInput(DEFAULT_ADMIN_PASSWORD);
-    setAuthError('');
-    alert(language === 'es' ? 'Contraseña maestra restablecida a pilot2026' : 'Password reset to default: pilot2026');
   };
 
   const handleLogout = () => {
@@ -638,27 +620,6 @@ export const AdminModal: React.FC<{ isPageMode?: boolean }> = ({ isPageMode = fa
                     <span>{authError}</span>
                   </p>
                 )}
-                <p className="text-[11px] text-slate-400 pt-0.5">
-                  {language === 'es' ? 'Contraseña inicial por defecto: ' : 'Default initial password: '}
-                  <code className="text-blue-600 font-mono font-bold bg-blue-50 px-1 py-0.5 rounded">pilot2026</code>
-                </p>
-
-                <div className="flex flex-wrap items-center gap-2 pt-1">
-                  <button
-                    type="button"
-                    onClick={handleFillDefaultPassword}
-                    className="text-[11px] font-semibold text-blue-600 hover:text-blue-800 bg-blue-50 hover:bg-blue-100 border border-blue-200 px-2.5 py-1 rounded-lg transition-colors cursor-pointer"
-                  >
-                    {language === 'es' ? '🔑 Autocompletar "pilot2026"' : '🔑 Autofill "pilot2026"'}
-                  </button>
-                  <button
-                    type="button"
-                    onClick={handleResetPasswordToDefault}
-                    className="text-[10px] text-slate-500 hover:text-slate-800 underline decoration-slate-300 cursor-pointer"
-                  >
-                    {language === 'es' ? 'Restablecer contraseña maestra' : 'Reset master password'}
-                  </button>
-                </div>
               </div>
 
               <div className="flex items-center justify-between gap-3 pt-2">

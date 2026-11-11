@@ -21,8 +21,8 @@ export const AboutView: React.FC = () => {
         </h1>
         <p className="text-base text-slate-600 leading-relaxed">
           {language === 'es'
-            ? 'CommissionPilot es una plataforma digital independiente dedicada exclusivamente al descubrimiento, análisis comparativo y recomendación de productos tecnológicos, herramientas digitales y equipamiento de estilo de vida.'
-            : 'CommissionPilot is an independent consumer recommendation engine dedicated solely to product discovery, technical comparisons, and verified purchasing guidance across consumer hardware, digital software, and lifestyle gear.'}
+            ? 'CommissionPilot es una plataforma digital independiente dedicada exclusivamente al descubrimiento, análisis comparativo y recomendación de gadgets innovadores, tecnología para viajes, confort del hogar y soluciones prácticas para el día a día.'
+            : 'CommissionPilot is an independent consumer recommendation engine dedicated solely to product discovery, technical comparisons, and verified purchasing guidance across innovative gadgets, travel tech, home comfort, and everyday solutions.'}
         </p>
       </div>
 

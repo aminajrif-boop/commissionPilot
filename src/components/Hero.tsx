@@ -25,13 +25,13 @@ export const Hero: React.FC = () => {
             <h1 className="text-3xl sm:text-4xl lg:text-[44px] font-black text-white tracking-tight leading-[1.14]">
               {language === 'es' ? (
                 <>
-                  Marketing Digital <br className="hidden sm:inline" />
-                  y <span className="text-[#A855F7] bg-gradient-to-r from-purple-400 via-fuchsia-400 to-indigo-300 bg-clip-text text-transparent">Software</span>
+                  Gadgets Innovadores <br className="hidden sm:inline" />
+                  y <span className="text-[#A855F7] bg-gradient-to-r from-purple-400 via-fuchsia-400 to-indigo-300 bg-clip-text text-transparent">Ofertas Verificadas</span>
                 </>
               ) : (
                 <>
-                  Digital Marketing <br className="hidden sm:inline" />
-                  & <span className="text-[#A855F7] bg-gradient-to-r from-purple-400 via-fuchsia-400 to-indigo-300 bg-clip-text text-transparent">Software</span>
+                  Innovative Gadgets <br className="hidden sm:inline" />
+                  & <span className="text-[#A855F7] bg-gradient-to-r from-purple-400 via-fuchsia-400 to-indigo-300 bg-clip-text text-transparent">Verified Deals</span>
                 </>
               )}
             </h1>
@@ -39,8 +39,8 @@ export const Hero: React.FC = () => {
             {/* Subtitle */}
             <p className="text-sm sm:text-base text-slate-300 leading-relaxed max-w-xl font-normal">
               {language === 'es'
-                ? 'Descubre las mejores plataformas digitales y software para optimizar tus proyectos online.'
-                : 'Discover top digital platforms and software to optimize your online projects.'}
+                ? 'Descubre los mejores gadgets, dispositivos y soluciones prácticas para tu día a día con análisis reales y descuentos exclusivos verificados.'
+                : 'Discover top innovative gadgets, smart devices, and practical solutions with honest reviews and verified discounts.'}
             </p>
 
             {/* Action Buttons */}

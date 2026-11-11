@@ -1,6 +1,6 @@
 {
   "name": "CommissionPilot",
-  "description": "CommissionPilot is a modern product discovery, recommendation, and comparison platform for verified products with transparent affiliate disclosures.",
+  "description": "CommissionPilot es un portal independiente de análisis y ofertas verificadas de gadgets innovadores, tecnología para viajes, hogar y estilo de vida.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
